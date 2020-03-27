@@ -3,19 +3,19 @@
 
 import UIKit
 
-class MoviesDBManager {
+class FlickerDBManager {
     
-    lazy var moviesDbRequest = MoviesDatabaseRequest()
+    lazy var flickerDbRequest = FlickerDatabaseRequest()
     
-    func saveMoviesData(data: [MovieModel]? ){
-        moviesDbRequest.saveMoviesData(data: data)
+    func saveFlickerData(data: [PhotoModel]? ){
+        flickerDbRequest.saveFlickerData(data: data)
     }
     
-    func getMoviesData() -> [MovieModel]? {
-        return moviesDbRequest.getMoviesData()
+    func getFlickerData() -> [PhotoModel]? {
+        return flickerDbRequest.getFlickerData()
     }
     
-    func deleteMoviesData(){
-        moviesDbRequest.deleteMoviesData()
+    func deleteFlickerData(){
+        flickerDbRequest.deleteFlickerData()
     }
 }

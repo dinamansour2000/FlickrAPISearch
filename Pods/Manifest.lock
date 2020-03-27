@@ -1,0 +1,70 @@
+PODS:
+  - Alamofire (5.0.0-rc.2)
+  - AlamofireObjectMapper (6.2.0):
+    - Alamofire (= 5.0.0-rc.2)
+    - ObjectMapper (~> 3.5.1)
+  - Cartography (4.0.0)
+  - Kingfisher (5.13.2):
+    - Kingfisher/Core (= 5.13.2)
+  - Kingfisher/Core (5.13.2)
+  - Localize-Swift (3.1.0)
+  - ObjectMapper (3.5.2)
+  - "ObjectMapper+Realm (1.0)":
+    - ObjectMapper
+    - RealmSwift
+  - ReachabilitySwift (4.3.1)
+  - Realm (4.4.0):
+    - Realm/Headers (= 4.4.0)
+  - Realm/Headers (4.4.0)
+  - RealmSwift (4.4.0):
+    - Realm (= 4.4.0)
+  - SwiftMessages (7.0.1):
+    - SwiftMessages/App (= 7.0.1)
+  - SwiftMessages/App (7.0.1)
+  - SwiftyJSON (5.0.0)
+
+DEPENDENCIES:
+  - Alamofire
+  - AlamofireObjectMapper
+  - Cartography
+  - Kingfisher
+  - Localize-Swift
+  - ObjectMapper
+  - "ObjectMapper+Realm"
+  - ReachabilitySwift (~> 4.1)
+  - RealmSwift
+  - SwiftMessages
+  - SwiftyJSON
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - AlamofireObjectMapper
+    - Cartography
+    - Kingfisher
+    - Localize-Swift
+    - ObjectMapper
+    - "ObjectMapper+Realm"
+    - ReachabilitySwift
+    - Realm
+    - RealmSwift
+    - SwiftMessages
+    - SwiftyJSON
+
+SPEC CHECKSUMS:
+  Alamofire: f9450d3c7f6bea2ad62e7a541c3e9b186c7991d6
+  AlamofireObjectMapper: 74d1440c92c42bbcc2b5f4dc81654ac095ec669f
+  Cartography: c5626d29056b20f1e95c017326ee4df57cc39ad8
+  Kingfisher: d342c8354c10c3d85a27d6d4c42c41285924b898
+  Localize-Swift: 4bed4f0ccac8be2ec3517ee359da80ba2adb0fae
+  ObjectMapper: b53ae947d370bf89423e86be7d4e2d2b2a8d3f40
+  "ObjectMapper+Realm": bd713d57132bf05880a656695137764692f7d2bb
+  ReachabilitySwift: 4032e2f59586e11e3b0ebe15b167abdd587a388b
+  Realm: e125f464884cda953ebefe70c671b75b03b81b9b
+  RealmSwift: 33656a42bd300959a081fc13347376bc478071af
+  SwiftMessages: b577dc7043be8b299857ab35bb663dbff6483bd0
+  SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
+
+PODFILE CHECKSUM: cf11f689fcb8fa0718d73c7266188dd7d4da3c6a
+
+COCOAPODS: 1.9.1

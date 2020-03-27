@@ -1,0 +1,6 @@
+framework module Pods_BleacherReport {
+  umbrella header "Pods-BleacherReport-umbrella.h"
+
+  export *
+  module * { export * }
+}

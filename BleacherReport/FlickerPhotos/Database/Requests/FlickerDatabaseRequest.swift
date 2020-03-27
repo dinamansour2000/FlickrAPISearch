@@ -3,11 +3,11 @@
 import Foundation
 import RealmSwift
 
-class MoviesDatabaseRequest: NSObject{
+class FlickerDatabaseRequest: NSObject{
     
     var mDispatchQueue: DispatchQueue?
     
-    func saveMoviesData(data: [MovieModel]? ){
+    func saveFlickerData(data: [PhotoModel]? ){
         
         if mDispatchQueue == nil{
             mDispatchQueue = DispatchQueue.main //TODO:: performance , we need to convert this ti background
@@ -19,24 +19,24 @@ class MoviesDatabaseRequest: NSObject{
             
             if let dataArray = data {
                 for itemModel in dataArray {
-                    let dataModel: MovieModel = itemModel
-                    realm.add(dataModel, update :true)
+                    let dataModel: PhotoModel = itemModel
+                    realm.add(dataModel)
                 }
             }
             try! realm.commitWrite()
         }
     }
     
-    func getMoviesData() -> [MovieModel]?{
+    func getFlickerData() -> [PhotoModel]?{
         let realm = try! Realm()
-        return  realm.objects(MovieModel.self).toArray()
+        return  realm.objects(PhotoModel.self).toArray()
     }
     
-    func deleteMoviesData() {
+    func deleteFlickerData() {
         mDispatchQueue?.async {
             let realm = try! Realm()
             realm.beginWrite()
-            realm.delete(realm.objects(MovieModel.self))
+            realm.delete(realm.objects(PhotoModel.self))
             try! realm.commitWrite()
         }
     }

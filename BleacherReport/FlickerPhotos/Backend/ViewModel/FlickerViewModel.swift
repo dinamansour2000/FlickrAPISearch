@@ -1,9 +1,9 @@
 //
 //  FlickerViewModel.swift
-//  Movies
+//  BleacherReport
 //
-//  Created by Dina Mansour on 6/4/19.
-//  Copyright © 2019 SWVL. All rights reserved.
+//  Created by Dina Mansour on 3/27/20.
+//  Copyright © 2020 Andela. All rights reserved.
 //
 
 import UIKit
@@ -16,10 +16,10 @@ class FlickerViewModel: NSObject {
     //
     //MARK: Network Request
     //
-    public func getFlickerData(movieTitle: String, delegate: FlickerRequestDelegate) {
+    public func getFlickerData(title: String, delegate: FlickerRequestDelegate) {
 
         
-        backendManager.getFlickerData(movieTitle: movieTitle, delegate: delegate);
+        backendManager.getFlickerData(title: title, delegate: delegate);
     }
     
     //

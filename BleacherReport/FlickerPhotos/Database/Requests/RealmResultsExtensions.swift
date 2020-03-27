@@ -10,10 +10,10 @@ import Foundation
 import RealmSwift
 
 extension Results {
-    func toArray() -> [MovieModel] {
-        var array = [MovieModel]()
+    func toArray() -> [PhotoModel] {
+        var array = [PhotoModel]()
         for result in self {
-            array.append(result as! MovieModel)
+            array.append(result as! PhotoModel)
         }
         return array
     }

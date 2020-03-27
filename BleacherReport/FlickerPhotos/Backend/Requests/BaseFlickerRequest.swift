@@ -1,9 +1,9 @@
 //
 //  BaseFlickerRequest.swift
-//  Movies
+//  BleacherReport
 //
-//  Created by Dina Mansour on 6/4/19.
-//  Copyright © 2019 SWVL. All rights reserved.
+//  Created by Dina Mansour on 3/27/20.
+//  Copyright © 2020 Andela. All rights reserved.
 //
 
 import Foundation
@@ -22,38 +22,32 @@ public class BaseFlickerRequest<T: Mappable>: NSObject {
     
     public override init() {
         super.init()
-       // addDebuggerConfiguration()
     }
+
     
-  /*  private func addDebuggerConfiguration() {
-        let configuration = URLSessionConfiguration.default
-        Dotzu.sharedManager.addLogger(session: configuration)
-        sessionManager = Alamofire.SessionManager(configuration: configuration)
-    } */
-    
-    public func getResponseArray(url: String, debugResponse: Bool = true) {
-        sessionManager.request(url, method: getMethodType(), parameters: getParameters() , encoding: JSONEncoding.default ,headers: getHeaders())
-            .debugLog()
-            .responseObject(completionHandler: { (response: DataResponse<T>) in
-                if debugResponse {
-                  //  Logger.info(response)
-                }
-                
-                weak var weakSelf = self
-                
-                switch response.result {
+    public func getResponseObject(url: String, debugResponse: Bool = true) {
+               sessionManager.request(url, method: getMethodType(), parameters: getParameters() , encoding: JSONEncoding.default ,headers: getHeaders())
+                .debugLog()
+                .responseObject(completionHandler: { (response: DataResponse<T, AFError>) in
+                    if debugResponse {
+                      //  Logger.info(response)
+                    }
                     
-                case .success(let data) :
+                    weak var weakSelf = self
                     
-                    weakSelf?.onRequestSuccess(data: data  )
-                    
-                case .failure(let error):
-                    debugPrint(error.localizedDescription)
-                    weakSelf?.onRequestFail()
-                    
-                }
-            })
-    }
+                    switch response.result {
+                        
+                    case .success(let data) :
+                        
+                        weakSelf?.onRequestSuccess(data: data  )
+                        
+                    case .failure(let error):
+                        debugPrint(error.localizedDescription)
+                        weakSelf?.onRequestFail()
+                        
+                    }
+                })
+        }
     
     func getMethodType() -> HTTPMethod {
         return .get
@@ -66,7 +60,7 @@ public class BaseFlickerRequest<T: Mappable>: NSObject {
         return headers
     }
     
-    func onRequestSuccess(data: T) {
+    func onRequestSuccess(data: T?) {
         preconditionFailure("Override onRequestSuccess func -> BaseHomeRequest")
     }
     

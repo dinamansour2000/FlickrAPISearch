@@ -1,9 +1,9 @@
 //
 //  FlickerBackendManager.swift
-//  Movies
+//  BleacherReport
 //
-//  Created by Dina Mansour on 6/4/19.
-//  Copyright © 2019 SWVL. All rights reserved.
+//  Created by Dina Mansour on 3/27/20.
+//  Copyright © 2020 Andela. All rights reserved.
 //
 
 import UIKit
@@ -14,9 +14,9 @@ class FlickerBackendManager: NSObject {
     
     lazy var flickerRequest = FlickerRequest()
     
-    public func getFlickerData(movieTitle: String, delegate: FlickerRequestDelegate) {
+    public func getFlickerData(title: String, delegate: FlickerRequestDelegate) {
         flickerRequest.delegate = delegate
-        flickerRequest.getFlickerData(movieTitle: movieTitle)
+        flickerRequest.getFlickerData(title: title)
     }
     
     func cancelFlickerDatatRequest() {

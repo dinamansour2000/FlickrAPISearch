@@ -7,7 +7,7 @@
 */
 
 //Messages
-"successTitle" = "The Movies";
-"errorTitle" = "Error";
-"tryAgain" = "Please try again later";
-"noNetworkConnected" = "Please make sure you are connected to the internet";
+"successTitle" = "نجاح";
+"errorTitle" = "خطأ";
+"tryAgain" = "يرجى المحاولة مرة اخرى";
+"noNetworkConnected" = "يرجى التاكد من الاتصال بالانتزنت";

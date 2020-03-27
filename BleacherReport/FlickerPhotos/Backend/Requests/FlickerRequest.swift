@@ -1,9 +1,9 @@
 //
 //  FlickerRequest.swift
-//  Movies
+//  BleacherReport
 //
-//  Created by Dina Mansour on 6/4/19.
-//  Copyright © 2019 SWVL. All rights reserved.
+//  Created by Dina Mansour on 3/27/20.
+//  Copyright © 2020 Andela. All rights reserved.
 //
 
 import Foundation
@@ -30,9 +30,9 @@ class FlickerRequest: BaseFlickerRequest<FlickerModel> {
         super.init()
     }
     
-    public func getFlickerData(movieTitle: String){
+    public func getFlickerData(title: String){
         delegate?.requestWillSend()
-        getResponseArray(url: FlickerConstant.FLICKER_URL + movieTitle + "&page=1&per_page=10", debugResponse: false)
+        getResponseObject(url: FlickerConstant.FLICKER_URL + title + "&page=1&per_page=25", debugResponse: false)
     }
     
     override func onRequestSuccess(data: FlickerModel?) {
