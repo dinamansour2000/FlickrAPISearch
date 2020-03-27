@@ -1,9 +1,9 @@
 //
 //  RealmResultsExtensions.swift
-//  Movies
+//  BleacherReport
 //
-//  Created by Dina Mansour on 6/6/19.
-//  Copyright © 2019 SWVL. All rights reserved.
+//  Created by Dina Mansour on 3/27/20.
+//  Copyright © 2020 Andela. All rights reserved.
 //
 
 import Foundation
